@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(bodyParser.json());
 
-const uri = `mongodb+srv://${process.env.PRIVATE_UsEmail}:${process.env.PRIVATE_MongoCode}@kobulmatrimony0.cu9hfbv.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.PRIVATE_UsEmail}:${process.env.PRIVATE_MongoCode}@cluster0.muyrflp.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
