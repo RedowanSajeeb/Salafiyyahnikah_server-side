@@ -2260,7 +2260,7 @@ async function run() {
             payerReference: " ",
 
             callbackURL:
-              "https://kobulserverbackend.kobul.com.bd/bkash/payment/callback",
+              "https://backednserver.salafiyyahnikah.com/bkash/payment/callback",
             amount: amount,
             currency: "BDT",
             intent: "sale",
@@ -2285,13 +2285,13 @@ async function run() {
         const result = await bkashBD.findOne(id);
         if (result) {
           return res.redirect(
-            `https://kobul.com.bd/error?messages=try-payment`
+            `https://salafiyyahnikah.com/error?messages=try-payment`
           );
         }
       }
 
       if (status === "cancel" || status === "failure") {
-        return res.redirect(`https://kobul.com.bd/error?messages=${status}`);
+        return res.redirect(`https://salafiyyahnikah.com/error?messages=${status}`);
       }
       if (status === "success") {
         try {
@@ -2368,16 +2368,16 @@ async function run() {
                 countInfo
               );
             }
-            return res.redirect(`https://kobul.com.bd/user-deshbordhome`);
+            return res.redirect(`https://salafiyyahnikah.com/user-deshbordhome`);
           } else {
             return res.redirect(
-              `https://kobul.com.bd/error?messages=${data.statusMessage}`
+              `https://salafiyyahnikah.com/error?messages=${data.statusMessage}`
             );
           }
         } catch (error) {
           console.log(error);
           return res.redirect(
-            `https://kobul.com.bd/error?messages=${error.message}`
+            `https://salafiyyahnikah.com/error?messages=${error.message}`
           );
         }
       }
